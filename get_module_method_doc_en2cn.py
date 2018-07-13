@@ -104,5 +104,6 @@ def info(object, spacing=20, collapse=0, tran=0):
     print('\n'.join(['{} {}'.format(method.ljust(spacing), get_translate_info(processFun(getattr(object, method).__doc__))) for method in methodList
             ]))
 
-import os
-info(os.path, 18, 1)
+if __name__ == '__main__':
+    import os
+    info(os.path, 18, 1)
